@@ -1,0 +1,40 @@
+<html>
+
+<head></head>
+<style>
+    /*Define style class for background red*/
+    .styleRed {
+        background-color: Red;
+        padding: 16px;
+    }
+</style>
+
+<style>
+    /*Define style class for background white*/
+    .styleWhite {
+        background-color: White;
+        padding: 16px;
+    }
+</style>
+
+<body>
+
+    <h1>Hello World!</h1>
+    <!--Create buttons-->
+    <button type="button" onclick="myFunction('styleRed')" id="b1">Change to Red</button><br>
+    <button type="button" onclick="myFunction('styleWhite')" id="b2">Change to White</button>
+
+    <script>
+        /*javascipt function to update classlist*/
+        function myFunction(clicked) {
+            if (clicked == "styleRed") {
+                document.body.classList.remove("styleWhite");
+                document.body.classList.add("styleRed");
+            }
+            if (clicked == "styleWhite") {
+                document.body.classList.remove("styleRed");
+                document.body.classList.add("styleWhite");
+            }
+
+        }
+    </script>
